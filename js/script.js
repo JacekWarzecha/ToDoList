@@ -15,8 +15,19 @@
 
     for (const task of tasks) {
       htmlString += `
-        <li>
-        ${task.content}
+        <li class="container__listItem">
+          <div>
+
+          <button class="container__listButton">🟩</button>
+          
+
+          ${task.content}
+          </div>
+          <div>
+
+          <button class="container__listButton--red">🗑️</button>
+          </div>
+
         </li>
       `;
     }

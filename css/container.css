@@ -21,7 +21,6 @@
 
 .container__item--flex {
     grid-template-columns: 5fr 1fr;
-    
 }
 
 
@@ -32,8 +31,7 @@
 .container__input {
     padding: 8px;
     width: 95%;
-    border: 2px solid #e8edf1;
-    
+    border: 2px solid #e8edf1;   
 }
 
 .container__button {
@@ -43,9 +41,38 @@
     border: 1px solid #e8edf1;
 }
 
-
 .container__h2 {
     font-size: 21px;
+}
+
+.container__list{
+    list-style: none;
+    margin-top: 0;
+    padding-left:5px;
+}
+
+.container__listItem{
+    display: grid;
+    grid-template-columns: 19fr 1fr;
+    border-bottom:1px solid #e8edf1;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.container__listItem--through {
+    text-decoration: line-through;
+}
+
+.container__listButton {
+    padding: 0;
+    border: 0;
+}
+
+.container__listButton--red {
+    padding: 5px 1px 1px;
+    border: 0;
+    background-color: red;
+
 }
 
 
@@ -61,3 +88,5 @@
     :-ms-input-placeholder {
     color: #9da2a5;
     }
+
+  
