@@ -53,7 +53,7 @@
 
 .container__listItem{
     display: grid;
-    grid-template-columns: 19fr 1fr;
+    grid-template-columns: 1fr 18fr 1fr;
     border-bottom:1px solid #e8edf1;
     margin: 20px 0;
     padding: 10px;
@@ -64,15 +64,20 @@
 }
 
 .container__listButton {
-    padding: 0;
+    padding: 0px;
     border: 0;
 }
 
 .container__listButton--red {
-    padding: 5px 1px 1px;
-    border: 0;
     background-color: red;
+    padding: 0;
+    border: 0;
+}
 
+.container__listItem--end{
+    display: grid;
+    justify-content: end;
+    align-content: flex-start;
 }
 
 

@@ -11,4 +11,5 @@ html {
   .body {
     font-family: 'Josefin Sans', sans-serif;
     background-color: #e8edf1;
+    word-break: break-word;
   }
