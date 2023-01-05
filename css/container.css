@@ -39,6 +39,11 @@
     color:#e8edf1;
     padding: 8px;
     border: 1px solid #e8edf1;
+    border-radius: 4px;
+}
+
+.container__button:hover{
+    cursor:pointer;
 }
 
 .container__h2 {
@@ -68,10 +73,16 @@
     border: 0;
 }
 
+
 .container__listButton--red {
     background-color: red;
     padding: 0;
     border: 0;
+}
+
+
+.container__listButton--red:hover{
+    cursor:pointer;
 }
 
 .container__listItem--end{
