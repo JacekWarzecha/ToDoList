@@ -1,14 +1,5 @@
 {
-  const tasks = [
-    {
-      content: "Przygotuj projekty",
-      done: false,
-    },
-    {
-      content: "Przygotuj cv",
-      done: true,
-    },
-  ];
+  const tasks = [];
 
   const addTask = (newTaskContent) => {
     tasks.push({
@@ -78,7 +69,6 @@
         toggleTaskDone(index);
       });
     });
-    console.log(toggleDoneButtons);
   };
 
   const init = () => {
