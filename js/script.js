@@ -5,6 +5,7 @@
     tasks.push({
       content: newTaskContent,
     });
+    render();
   };
 
   const removeTask = (index) => {
@@ -17,8 +18,35 @@
     render();
   };
 
+  const bindEvents = () => {
+    const removeButtons = document.querySelectorAll(".js-buttonRemove");
+
+    removeButtons.forEach((removeButton, index) => {
+      removeButton.addEventListener("click", () => {
+        removeTask(index);
+      });
+    });
+
+    const toggleDoneButtons = document.querySelectorAll(".js-buttonDone");
+
+    toggleDoneButtons.forEach((toggleDoneButton, index) => {
+      toggleDoneButton.addEventListener("click", () => {
+        toggleTaskDone(index);
+      });
+    });
+  };
+
+  const autofocus = () => {
+    document.querySelector(".js-newTask").focus();
+  };
+
+  const clearInput = () => {
+    document.querySelector(".js-newTask").value = "";
+  };
+
   const onFormSubmit = (event) => {
     event.preventDefault();
+    autofocus();
 
     const newTaskContent = document.querySelector(".js-newTask").value.trim();
     if (newTaskContent === "") {
@@ -27,7 +55,8 @@
 
     addTask(newTaskContent);
 
-    render();
+    autofocus();
+    clearInput();
   };
 
   const render = () => {
@@ -46,7 +75,7 @@
 
             </span>
 
-            <button class=" js-buttonRemove container__listButton--red">🗑️</button>
+            <button class=" js-buttonRemove container__listButton container__listButton--red">🗑️</button>
 
         </li>
       `;
@@ -54,21 +83,7 @@
 
     document.querySelector(".js-tasksList").innerHTML = htmlString;
 
-    const removeButtons = document.querySelectorAll(".js-buttonRemove");
-
-    removeButtons.forEach((removeButton, index) => {
-      removeButton.addEventListener("click", () => {
-        removeTask(index);
-      });
-    });
-
-    const toggleDoneButtons = document.querySelectorAll(".js-buttonDone");
-
-    toggleDoneButtons.forEach((toggleDoneButton, index) => {
-      toggleDoneButton.addEventListener("click", () => {
-        toggleTaskDone(index);
-      });
-    });
+    bindEvents();
   };
 
   const init = () => {
