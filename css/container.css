@@ -53,7 +53,7 @@
 .container__list{
     list-style: none;
     margin-top: 0;
-    padding-left:5px;
+    padding-left:0;
 }
 
 .container__listItem{
@@ -61,34 +61,39 @@
     grid-template-columns: 1fr 18fr 1fr;
     border-bottom:1px solid #e8edf1;
     margin: 20px 0;
-    padding: 10px;
+    padding: 5px;
+    grid-gap: 10px;
+    align-items: center;
 }
 
 .container__listItem--through {
     text-decoration: line-through;
 }
 
-.container__listButton {
-    padding: 0px;
-    border: 0;
+.container__listButton{
+    width: 30px;
+    height: 30px;
+}
+
+.container__listButton--done {
+    background-color: green;
+    border: 1px solid green;
+    color: white;
+    
 }
 
 
 .container__listButton--red {
     background-color: red;
     padding: 0;
-    border: 0;
+    border: 1px solid red;
+    width: 30px;
+    height: 30px;
 }
 
 
 .container__listButton--red:hover{
     cursor:pointer;
-}
-
-.container__listItem--end{
-    display: grid;
-    justify-content: end;
-    align-content: flex-start;
 }
 
 

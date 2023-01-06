@@ -46,23 +46,16 @@
       htmlString += `
         <li class="container__listItem">
 
-          <div>
+            <button class=" js-buttonDone container__listButton container__listButton--done">
+              ${task.done ? "✔" : ""}
+            </button>
 
-          <button class=" js-buttonDone container__listButton">🟩</button>
-          </div>
+            <span class="${task.done ? "container__listItem--through" : ""}" >
+              ${task.content}
 
-          <div>
+            </span>
 
-          <span class="${task.done ? "container__listItem--through" : ""}" >
-           ${task.content}
-
-          </span>
-          </div>
-          
-          <div class="container__listItem--end">
-
-          <button class=" js-buttonRemove container__listButton--red">🗑️</button>
-          </div>
+            <button class=" js-buttonRemove container__listButton--red">🗑️</button>
 
         </li>
       `;
