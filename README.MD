@@ -8,4 +8,4 @@
 
 ### View from app:
 
-![view from app]()
+![view from app](https://raw.githubusercontent.com/JacekWarzecha/ToDoList/main/gif/ToDo%20App.gif)
