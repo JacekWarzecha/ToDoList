@@ -5,3 +5,7 @@
 ### This app is a part of make experience with "YouCode".
 
 ### You can use this app to organization your tasks.
+
+### View from app:
+
+![view from app]()
