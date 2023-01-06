@@ -6,6 +6,6 @@
 
 ### You can use this app to organization your tasks.
 
-### View from app:
+### View from the app:
 
-![view from app](https://raw.githubusercontent.com/JacekWarzecha/ToDoList/main/gif/ToDo%20App.gif)
+![view from the app](https://raw.githubusercontent.com/JacekWarzecha/ToDoList/main/gif/ToDo%20App.gif)
