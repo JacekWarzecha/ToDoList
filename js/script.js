@@ -65,22 +65,16 @@
     for (const task of tasks) {
       htmlString += `
         <li class="container__listItem">
-
             <button class=" js-buttonDone container__listButton container__listButton--done">
               ${task.done ? "✔" : ""}
             </button>
-
-            <span class="${task.done ? "container__listItem--through" : ""}" >
+            <span class="${task.done ? "container__listItem--done" : ""}" >
               ${task.content}
-
             </span>
-
             <button class=" js-buttonRemove container__listButton container__listButton--red">🗑️</button>
-
         </li>
       `;
     }
-
     document.querySelector(".js-tasksList").innerHTML = htmlString;
 
     bindEvents();

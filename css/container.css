@@ -8,7 +8,7 @@
 
 .container__item{
     display:grid;
-    padding: 0 15px;
+    padding: 0 20px;
     border-bottom: 2px solid #e8edf1;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .container__item--flex {
-    grid-template-columns: 5fr 1fr;
+    grid-template-columns: 1fr auto;
 }
 
 @media(max-width: 767px) {
@@ -39,7 +39,7 @@
 
 .container__input {
     padding: 8px;
-    width: 95%;
+    width: 97%;
     border: 2px solid #e8edf1;   
 }
 
@@ -52,7 +52,7 @@
 .container__button {
     background-color: teal;
     color:#e8edf1;
-    padding: 8px;
+    padding: 9px;
     border: 1px solid #e8edf1;
     border-radius: 4px;
 }
@@ -75,7 +75,7 @@
 
 .container__listItem{
     display: grid;
-    grid-template-columns: 1fr 18fr 1fr;
+    grid-template-columns: auto 1fr auto;
     border-bottom:1px solid #e8edf1;
     margin: 20px 0;
     padding: 5px;
@@ -83,8 +83,7 @@
     align-items: center;
 }
 
-
-.container__listItem--through {
+.container__listItem--done {
     text-decoration: line-through;
 }
 

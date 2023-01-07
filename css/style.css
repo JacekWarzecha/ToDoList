@@ -1,15 +1,15 @@
 html {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
   
-  *,
-  ::after,
-  ::before {
-    box-sizing: inherit;
-  }
+*,
+::after,
+::before {
+ box-sizing: inherit;
+}
   
-  .body {
-    font-family: 'Josefin Sans', sans-serif;
-    background-color: #e8edf1;
-    word-break: break-word;
-  }
+.body {
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: #e8edf1;
+  word-break: break-word;
+}
