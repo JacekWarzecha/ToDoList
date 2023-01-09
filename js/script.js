@@ -77,12 +77,19 @@
     }
     document.querySelector(".js-tasksList").innerHTML = htmlString;
 
+    let htmlStringSecond = `
+      
+        <button class="container__remoteButtons">Ukryj ukończone</button> 
+        <button class="container__remoteButtons">Ukończ wszystkie</button>
+      
+    `;
+
+    document.querySelector(".js-remoteButtons").innerHTML = htmlStringSecond;
+
     bindEvents();
   };
 
   const init = () => {
-    render();
-
     const form = document.querySelector(".js-form");
     form.addEventListener("submit", onFormSubmit);
   };

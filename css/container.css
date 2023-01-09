@@ -67,12 +67,32 @@
 .container__button:hover{
     cursor:pointer;
     background-color: hsl(180, 100%, 30%);
+    transform: scale(1.15);
     
 }
 
 .container__button:active{
     background-color: hsl(180, 100%, 35%);
     transform: translateY(-10px);
+}
+
+.container__item--flexSecond{
+    display:grid;
+    grid-template-columns: 1fr auto;
+}
+
+.container__divRemoteButtons {
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-gap:20px;
+}
+
+.container__remoteButtons {
+    display:grid;
+    align-items: center;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    font-size: 18px;
 }
 
 .container__list{
