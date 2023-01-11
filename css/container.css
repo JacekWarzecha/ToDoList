@@ -77,22 +77,31 @@
 }
 
 .container__item--flexSecond{
-    display:grid;
+    display: grid;
     grid-template-columns: 1fr auto;
 }
 
 .container__divRemoteButtons {
-    display:grid;
+    display: grid;
     grid-template-columns: auto auto;
     grid-gap:20px;
 }
 
 .container__remoteButtons {
-    display:grid;
+    display :grid;
     align-items: center;
     border: 1px solid #ffffff;
     background-color: #ffffff;
     font-size: 18px;
+    color:hsl(180, 100%, 25%);
+}
+
+.container__remoteButtons:hover {
+    color: hsl(180, 100%, 30%)
+}
+
+.container__remoteButtons:disabled {
+    color:#ccc;
 }
 
 .container__list{

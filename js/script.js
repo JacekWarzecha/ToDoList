@@ -1,6 +1,21 @@
 {
   let tasks = [];
 
+  let hideDoneTasks = false;
+
+  const toggleHideDoneTasks = () => {
+    hideDoneTasks = !hideDoneTasks;
+    render();
+  };
+
+  const markAllTasksDone = () => {
+    tasks = tasks.map((task) => ({
+      ...task,
+      done: true,
+    }));
+    render();
+  };
+
   const addTask = (newTaskContent) => {
     tasks = [...tasks, { content: newTaskContent }];
     render();
@@ -39,6 +54,20 @@
     });
   };
 
+  const bindButtonsEvents = () => {
+    const hideButton = document.querySelector(".js-hideButton");
+
+    if (hideButton) {
+      hideButton.addEventListener("click", toggleHideDoneTasks);
+    }
+
+    const markAsDoneButton = document.querySelector(".js-markAsDone");
+
+    if (markAsDoneButton) {
+      markAsDoneButton.addEventListener("click", markAllTasksDone);
+    }
+  };
+
   const autofocus = () => {
     document.querySelector(".js-newTask").focus();
   };
@@ -62,12 +91,12 @@
     clearInput();
   };
 
-  const render = () => {
+  const renderTasks = () => {
     let htmlString = "";
 
     for (const task of tasks) {
       htmlString += `
-        <li class="container__listItem">
+        <li class="container__listItem" ${tasks.every}>
             <button class=" js-buttonDone container__listButton container__listButton--done">
               ${task.done ? "✔" : ""}
             </button>
@@ -79,18 +108,36 @@
       `;
     }
     document.querySelector(".js-tasksList").innerHTML = htmlString;
+  };
 
-    let htmlStringSecond = `
-      
-        <button class="container__remoteButtons">Ukryj ukończone</button> 
-        <button class="container__remoteButtons">Ukończ wszystkie</button>
-      
+  const renderButtons = () => {
+    const htmlStringSecond = document.querySelector(".js-remoteButtons");
+
+    if (!tasks.length) {
+      htmlStringSecond.innerHTML = "";
+      return;
+    }
+
+    htmlStringSecond.innerHTML = `
+
+      <button class=" js-hideButton container__remoteButtons">${
+        hideDoneTasks ? "Pokaż" : "Ukryj"
+      } ukończone</button>
+      <button class=" js-markAsDone container__remoteButtons" ${
+        tasks.every(({ done }) => done) ? "disabled" : ""
+      }>Ukończ wszystkie</button>
     `;
 
-    document.querySelector(".js-remoteButtons").innerHTML = htmlStringSecond;
+    // ${tasks.done} ? disabled : submit type
+  };
+
+  const render = () => {
+    renderTasks();
+    renderButtons();
 
     bindRemoveEvents();
     bindToggleDoneEvents();
+    bindButtonsEvents();
   };
 
   const init = () => {
