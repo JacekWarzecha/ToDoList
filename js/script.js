@@ -96,7 +96,9 @@
 
     for (const task of tasks) {
       htmlString += `
-        <li class="container__listItem" ${tasks.every}>
+        <li class="container__listItem ${
+          task.done && hideDoneTasks ? "container__listItem--hidden" : ""
+        }">
             <button class=" js-buttonDone container__listButton container__listButton--done">
               ${task.done ? "✔" : ""}
             </button>
@@ -127,8 +129,6 @@
         tasks.every(({ done }) => done) ? "disabled" : ""
       }>Ukończ wszystkie</button>
     `;
-
-    // ${tasks.done} ? disabled : submit type
   };
 
   const render = () => {

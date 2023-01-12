@@ -81,10 +81,26 @@
     grid-template-columns: 1fr auto;
 }
 
+@media(max-width:767px) {
+    .container__item--flexSecond {
+        grid-template-columns: none;
+        grid-template-rows: auto auto;
+    }
+}
+
 .container__divRemoteButtons {
     display: grid;
     grid-template-columns: auto auto;
     grid-gap:20px;
+}
+
+@media(max-width: 767px) {
+    .container__divRemoteButtons {
+        grid-template-columns: none;
+        grid-template-rows: auto auto;
+        padding-bottom: 20px;
+    }
+    
 }
 
 .container__remoteButtons {
@@ -122,6 +138,10 @@
 
 .container__listItem--done {
     text-decoration: line-through;
+}
+
+.container__listItem--hidden{
+    display: none;
 }
 
 .container__listButton{
