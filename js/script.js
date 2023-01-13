@@ -44,6 +44,13 @@
     });
   };
 
+  //tak się zastanawiałem, dlaczego nie możemy wywołać funkcji removeTask(index)
+  //tak jak wywołujemy w funkcji bindButtonsEvents funkcji toggleHideDoneTasks
+  //tzn:
+  // removeButtons.forEach((removeButton, index) => {
+  //   removeButton.addEventListener("click", removeTask(index));
+  // });
+
   const bindToggleDoneEvents = () => {
     const toggleDoneButtons = document.querySelectorAll(".js-buttonDone");
 
@@ -92,35 +99,34 @@
   };
 
   const renderTasks = () => {
-    let htmlString = "";
-
-    for (const task of tasks) {
-      htmlString += `
-        <li class="container__listItem ${
+    const taskToHTML = (task) => `
+        <li class="
+        container__listItem ${
           task.done && hideDoneTasks ? "container__listItem--hidden" : ""
         }">
-            <button class=" js-buttonDone container__listButton container__listButton--done">
-              ${task.done ? "✔" : ""}
-            </button>
-            <span class="${task.done ? "container__listItem--done" : ""}" >
-              ${task.content}
-            </span>
-            <button class=" js-buttonRemove container__listButton container__listButton--red">🗑️</button>
+          <button class=" js-buttonDone container__listButton container__listButton--done">
+            ${task.done ? "✔" : ""}
+          </button>
+          <span class="${task.done ? "container__listItem--done" : ""}" >
+            ${task.content}
+          </span>
+          <button class=" js-buttonRemove container__listButton container__listButton--red">🗑️</button>
         </li>
       `;
-    }
-    document.querySelector(".js-tasksList").innerHTML = htmlString;
+
+    const tasksElement = document.querySelector(".js-tasksList");
+    tasksElement.innerHTML = tasks.map(taskToHTML).join("");
   };
 
   const renderButtons = () => {
-    const htmlStringSecond = document.querySelector(".js-remoteButtons");
+    const buttonsToHTML = document.querySelector(".js-remoteButtons");
 
     if (!tasks.length) {
-      htmlStringSecond.innerHTML = "";
+      buttonsToHTML.innerHTML = "";
       return;
     }
 
-    htmlStringSecond.innerHTML = `
+    buttonsToHTML.innerHTML = `
 
       <button class=" js-hideButton container__remoteButtons">${
         hideDoneTasks ? "Pokaż" : "Ukryj"

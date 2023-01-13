@@ -67,7 +67,7 @@
 .container__button:hover{
     cursor:pointer;
     background-color: hsl(180, 100%, 30%);
-    transform: scale(1.15);
+    transform: scale(1.1);
     
 }
 
@@ -110,6 +110,7 @@
     background-color: #ffffff;
     font-size: 18px;
     color:hsl(180, 100%, 25%);
+    transition: 0.25s;
 }
 
 .container__remoteButtons:hover {
@@ -157,6 +158,7 @@
     background-color: hsl(120, 100%, 25%);
     color: white;
     border: 1px solid green;
+    transition: 0.25s;
 }
 
 .container__listButton--done:hover {
@@ -167,6 +169,7 @@
     background-color: hsl(0, 100%, 50%);
     padding: 0;
     border: 1px solid red;
+    transition: 0.25s;
 }
 
 .container__listButton--red:hover{
