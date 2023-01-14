@@ -22,7 +22,8 @@
   };
 
   const removeTask = (index) => {
-    (tasks = [...tasks.slice(0, index), ...tasks.slice(index + 1)]), render();
+    tasks = [...tasks.slice(0, index), ...tasks.slice(index + 1)];
+    render();
   };
 
   const toggleTaskDone = (taskIndex) => {
@@ -43,13 +44,6 @@
       });
     });
   };
-
-  //tak się zastanawiałem, dlaczego nie możemy wywołać funkcji removeTask(index)
-  //tak jak wywołujemy w funkcji bindButtonsEvents funkcji toggleHideDoneTasks
-  //tzn:
-  // removeButtons.forEach((removeButton, index) => {
-  //   removeButton.addEventListener("click", removeTask(index));
-  // });
 
   const bindToggleDoneEvents = () => {
     const toggleDoneButtons = document.querySelectorAll(".js-buttonDone");
@@ -75,7 +69,7 @@
     }
   };
 
-  const autofocus = () => {
+  const focusInput = () => {
     document.querySelector(".js-newTask").focus();
   };
 
@@ -85,16 +79,14 @@
 
   const onFormSubmit = (event) => {
     event.preventDefault();
-    autofocus();
 
     const newTaskContent = document.querySelector(".js-newTask").value.trim();
-    if (newTaskContent === "") {
-      return;
+
+    if (newTaskContent !== "") {
+      addTask(newTaskContent);
     }
 
-    addTask(newTaskContent);
-
-    autofocus();
+    focusInput();
     clearInput();
   };
 
@@ -148,6 +140,7 @@
 
   const init = () => {
     const form = document.querySelector(".js-form");
+
     form.addEventListener("submit", onFormSubmit);
   };
 
