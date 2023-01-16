@@ -14,6 +14,9 @@
     />
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/container.css" rel="stylesheet" />
+    <link href="css/form.css" rel="stylesheet" />
+    <link href="css/remoteButtons.css" rel="stylesheet" />
+    <link href="css/tasks.css" rel="stylesheet" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,7 +30,7 @@
       src="https://unpkg.com/react@18/umd/react.development.js"
     ></script>
     <script
-      crossorigin
+      crossorigin--flex
       src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
     ></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
@@ -43,15 +46,13 @@
         <h2 class="container__h2">Dodaj nowe zadanie</h2>
       </div>
 
-      <div
-        class="container__item container__item--flex container__item--border"
-      >
+      <div class="form">
         <div>
           <form id="formTask" class="js-form">
             <p>
               <input
                 name="newTask"
-                class="js-newTask container__input"
+                class="js-newTask form__input"
                 placeholder="Co jest do zrobienia?"
                 autofocus
                 maxlength="1001"
@@ -59,12 +60,13 @@
             </p>
           </form>
         </div>
+
         <div>
           <p>
             <button
               type="submit"
               form="formTask"
-              class="js-button container__button"
+              class="js-button form__button"
             >
               Dodaj zadanie
             </button>
@@ -72,16 +74,16 @@
         </div>
       </div>
 
-      <div class="container__item container__item--flexSecond">
+      <div class="remoteButtons">
         <div>
-          <h2 class="container__h2">Lista zadań</h2>
+          <h2 class="remoteButtons__h2">Lista zadań</h2>
         </div>
 
-        <div class="js-remoteButtons container__divRemoteButtons"></div>
+        <div class="js-remoteButtons remoteButtons__destination"></div>
       </div>
 
-      <div class="container__item container__item--last">
-        <ul class="js-tasksList container__list"></ul>
+      <div class="tasks">
+        <ul class="js-tasksList tasks__list"></ul>
       </div>
     </div>
   </body>
