@@ -17,6 +17,7 @@
     <link href="css/form.css" rel="stylesheet" />
     <link href="css/remoteButtons.css" rel="stylesheet" />
     <link href="css/tasks.css" rel="stylesheet" />
+    <link href="css/section.css" rel="stylesheet" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,12 +39,12 @@
 
   <body class="body">
     <div class="container">
-      <div class="container__item--first">
+      <div class="container__item">
         <h1>Lista zadań</h1>
       </div>
 
-      <div class="container__item">
-        <h2 class="container__h2">Dodaj nowe zadanie</h2>
+      <div class="section">
+        <h2 class="section__h2">Dodaj nowe zadanie</h2>
       </div>
 
       <div class="form">
@@ -74,12 +75,10 @@
         </div>
       </div>
 
-      <div class="remoteButtons">
-        <div>
-          <h2 class="remoteButtons__h2">Lista zadań</h2>
-        </div>
+      <div class="section section--grid">
+        <h2 class="section__h2">Lista zadań</h2>
 
-        <div class="js-remoteButtons remoteButtons__destination"></div>
+        <div class="js-remoteButtons remoteButtons"></div>
       </div>
 
       <div class="tasks">
