@@ -22,3 +22,7 @@
         grid-template-rows: auto auto;
     }
 }
+
+.section--borderBottom {
+    border-bottom: 10px solid #e8edf1;
+}

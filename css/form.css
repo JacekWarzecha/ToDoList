@@ -1,11 +1,7 @@
 .form {
-    display:grid;
-    padding: 0 20px;
-    border-bottom: 2px solid #e8edf1;
-    box-shadow: 0 0 1px #ccc;
+    display: grid;
     grid-template-columns: 1fr auto;
     grid-gap: 20px;
-    border-bottom: 10px solid #e8edf1;
 }
 
 @media(max-width: 767px) {
@@ -14,6 +10,7 @@
     grid-auto-rows: minmax(10px, 45px);
     align-items: center;
     padding: 10px 20px;
+    grid-gap: 5px;
     }
 }
 

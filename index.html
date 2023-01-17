@@ -47,32 +47,21 @@
         <h2 class="section__h2">Dodaj nowe zadanie</h2>
       </div>
 
-      <div class="form">
-        <div>
-          <form id="formTask" class="js-form">
-            <p>
-              <input
-                name="newTask"
-                class="js-newTask form__input"
-                placeholder="Co jest do zrobienia?"
-                autofocus
-                maxlength="1001"
-              />
-            </p>
-          </form>
-        </div>
-
-        <div>
+      <div class="section section--borderBottom">
+        <form class="js-form form">
           <p>
-            <button
-              type="submit"
-              form="formTask"
-              class="js-button form__button"
-            >
-              Dodaj zadanie
-            </button>
+            <input
+              name="newTask"
+              class="js-newTask form__input"
+              placeholder="Co jest do zrobienia?"
+              autofocus
+              maxlength="1001"
+            />
           </p>
-        </div>
+          <p>
+            <button class="js-button form__button">Dodaj zadanie</button>
+          </p>
+        </form>
       </div>
 
       <div class="section section--grid">
