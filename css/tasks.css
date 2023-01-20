@@ -1,25 +1,16 @@
-.tasks {
-    display:grid;
-    padding: 0 20px;
-    border-bottom: 2px solid #e8edf1;
-    box-shadow: 0 0 1px #ccc;
-    padding-top: 15px; 
-}
-
 .tasks__list{
     list-style: none;
-    margin-top: 0;
-    padding-left: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .tasks__listItem{
     display: grid;
     grid-template-columns: auto 1fr auto;
-    border-bottom:1px solid #e8edf1;
-    padding-top: 10px;
-    padding-bottom: 10px;
     grid-gap: 10px;
+    padding: 10px;
     align-items: center;
+    border-bottom:1px solid #e8edf1;
 }
 
 .tasks__listItem--done {

@@ -1,25 +1,21 @@
 .remoteButtons {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap:20px;
-}
-    
-@media(max-width: 767px) {
-    .remoteButtons {
-        grid-template-columns: none;
-        grid-template-rows: auto auto;
-        padding-bottom: 20px;
-    }
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .remoteButtons__buttons {
-    display :grid;
-    align-items: center;
+    margin: 0 0 0 20px;
     border: 1px solid #ffffff;
     background-color: #ffffff;
-    font-size: 18px;
     color:hsl(180, 100%, 25%);
     transition: 0.25s;
+}
+
+@media(max-width: 767px){
+    .remoteButtons__buttons {
+        flex-basis:100%;
+        margin: 10px;
+    }
 }
 
 .remoteButtons__buttons:hover {

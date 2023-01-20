@@ -1,13 +1,7 @@
 .container {
-    max-width: 65%;
-    margin: 20px auto;
-    background-color: #ffffff;
-    display: grid;
-    grid-auto-rows: minmax(50px, auto);
-}
-
-.container__item {
-    background-color: #e8edf1;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 
